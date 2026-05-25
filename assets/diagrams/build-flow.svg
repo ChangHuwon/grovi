@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="100%" role="img" aria-labelledby="build-title build-desc">
+  <title id="build-title">Build 트랙 흐름도</title>
+  <desc id="build-desc">GROVI Build 트랙의 4단계: Discover, Design, Build, Release와 각 단계 간 핸드오프를 보여주는 흐름도</desc>
+
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#60A5FA"/>
+    </marker>
+  </defs>
+
+  <!-- Stage 1: Discover -->
+  <rect x="30" y="30" width="220" height="120" rx="12" fill="rgba(67,56,202,0.15)" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="48" y="68" font-family="'Courier New', monospace" font-size="28" fill="#93C5FD" font-weight="700">01</text>
+  <text x="48" y="96" font-family="sans-serif" font-size="16" fill="#FFFFFF" font-weight="600" letter-spacing="1">DISCOVER</text>
+  <text x="48" y="118" font-family="sans-serif" font-size="12" fill="#94A3B8">시장 · 사용자 리서치</text>
+  <text x="48" y="134" font-family="sans-serif" font-size="12" fill="#94A3B8">기회 발굴</text>
+
+  <!-- Handoff label 1 -->
+  <text x="263" y="87" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94A3B8">요구</text>
+  <text x="263" y="100" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94A3B8">정의서</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="252" y1="90" x2="298" y2="90" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+  <!-- Stage 2: Design -->
+  <rect x="310" y="30" width="220" height="120" rx="12" fill="rgba(67,56,202,0.15)" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="328" y="68" font-family="'Courier New', monospace" font-size="28" fill="#93C5FD" font-weight="700">02</text>
+  <text x="328" y="96" font-family="sans-serif" font-size="16" fill="#FFFFFF" font-weight="600" letter-spacing="1">DESIGN</text>
+  <text x="328" y="118" font-family="sans-serif" font-size="12" fill="#94A3B8">아키텍처 · UI/UX</text>
+  <text x="328" y="134" font-family="sans-serif" font-size="12" fill="#94A3B8">프로토타입</text>
+
+  <!-- Handoff label 2 -->
+  <text x="543" y="87" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94A3B8">설계</text>
+  <text x="543" y="100" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94A3B8">명세서</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="532" y1="90" x2="578" y2="90" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+  <!-- Stage 3: Build -->
+  <rect x="590" y="30" width="220" height="120" rx="12" fill="rgba(67,56,202,0.15)" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="608" y="68" font-family="'Courier New', monospace" font-size="28" fill="#93C5FD" font-weight="700">03</text>
+  <text x="608" y="96" font-family="sans-serif" font-size="16" fill="#FFFFFF" font-weight="600" letter-spacing="1">BUILD</text>
+  <text x="608" y="118" font-family="sans-serif" font-size="12" fill="#94A3B8">개발 · 테스트</text>
+  <text x="608" y="134" font-family="sans-serif" font-size="12" fill="#94A3B8">품질 검증</text>
+
+  <!-- Handoff label 3 -->
+  <text x="823" y="87" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94A3B8">릴리즈</text>
+  <text x="823" y="100" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94A3B8">패키지</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="812" y1="90" x2="858" y2="90" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+  <!-- Stage 4: Release -->
+  <rect x="870" y="30" width="220" height="120" rx="12" fill="rgba(67,56,202,0.15)" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="888" y="68" font-family="'Courier New', monospace" font-size="28" fill="#93C5FD" font-weight="700">04</text>
+  <text x="888" y="96" font-family="sans-serif" font-size="16" fill="#FFFFFF" font-weight="600" letter-spacing="1">RELEASE</text>
+  <text x="888" y="118" font-family="sans-serif" font-size="12" fill="#94A3B8">배포 · 론칭</text>
+  <text x="888" y="134" font-family="sans-serif" font-size="12" fill="#94A3B8">시장 출시</text>
+
+</svg>

@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="100%" role="img" aria-labelledby="framework-title framework-desc">
+  <title id="framework-title">GROVI 프레임워크 다이어그램</title>
+  <desc id="framework-desc">GROVI의 세 가지 트랙(Build, Opts, Agent)과 각 단계를 보여주는 프레임워크 개요 다이어그램</desc>
+
+  <!-- Arrowhead markers -->
+  <defs>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#CBD5E1"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FB923C"/>
+    </marker>
+    <marker id="arrow-orange-left" markerWidth="10" markerHeight="7" refX="1" refY="3.5" orient="auto">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#94A3B8"/>
+    </marker>
+  </defs>
+
+  <!-- ─── BUILD TRACK BAND ─── -->
+  <rect x="20" y="55" width="1160" height="150" rx="10" fill="#DBEAFE" fill-opacity="0.5" stroke="#93C5FD" stroke-width="1"/>
+  <text x="36" y="85" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#2563EB" letter-spacing="2">BUILD</text>
+
+  <!-- Build nodes -->
+  <!-- Discover x=150 -->
+  <circle cx="150" cy="135" r="30" fill="#4338CA" stroke="#60A5FA" stroke-width="2">
+    <title>Discover — 발견 단계</title>
+  </circle>
+  <text x="150" y="140" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#FFFFFF" font-weight="600">Discover</text>
+  <text x="150" y="181" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1E293B">Discover</text>
+
+  <!-- Design x=350 -->
+  <circle cx="350" cy="135" r="30" fill="#4338CA" stroke="#60A5FA" stroke-width="2">
+    <title>Design — 설계 단계</title>
+  </circle>
+  <text x="350" y="140" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#FFFFFF" font-weight="600">Design</text>
+  <text x="350" y="181" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1E293B">Design</text>
+
+  <!-- Build x=550 -->
+  <circle cx="550" cy="135" r="30" fill="#4338CA" stroke="#60A5FA" stroke-width="2">
+    <title>Build — 구축 단계</title>
+  </circle>
+  <text x="550" y="140" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#FFFFFF" font-weight="600">Build</text>
+  <text x="550" y="181" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1E293B">Build</text>
+
+  <!-- Release x=750 -->
+  <circle cx="750" cy="135" r="30" fill="#4338CA" stroke="#60A5FA" stroke-width="2">
+    <title>Release — 출시 단계</title>
+  </circle>
+  <text x="750" y="140" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#FFFFFF" font-weight="600">Release</text>
+  <text x="750" y="181" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1E293B">Release</text>
+
+  <!-- Arrows within Build track -->
+  <line x1="181" y1="135" x2="318" y2="135" stroke="#CBD5E1" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+  <line x1="381" y1="135" x2="518" y2="135" stroke="#CBD5E1" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+  <line x1="581" y1="135" x2="718" y2="135" stroke="#CBD5E1" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+
+  <!-- ─── OPTS TRACK BAND ─── -->
+  <rect x="20" y="215" width="1160" height="125" rx="10" fill="#DCFCE7" fill-opacity="0.5" stroke="#4ADE80" stroke-width="1"/>
+  <text x="36" y="237" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#16A34A" letter-spacing="2">OPTS</text>
+
+  <!-- Opts nodes -->
+  <!-- Operate x=150 -->
+  <circle cx="150" cy="278" r="30" fill="#16A34A" stroke="#4ADE80" stroke-width="2">
+    <title>Operate — 운영 단계</title>
+  </circle>
+  <text x="150" y="283" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#FFFFFF" font-weight="600">Operate</text>
+  <text x="150" y="324" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1E293B">Operate</text>
+
+  <!-- Optimize x=350 -->
+  <circle cx="350" cy="278" r="30" fill="#16A34A" stroke="#4ADE80" stroke-width="2">
+    <title>Optimize — 최적화 단계</title>
+  </circle>
+  <text x="350" y="283" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#FFFFFF" font-weight="600">Optimize</text>
+  <text x="350" y="324" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1E293B">Optimize</text>
+
+  <!-- Analyze x=550 -->
+  <circle cx="550" cy="278" r="30" fill="#16A34A" stroke="#4ADE80" stroke-width="2">
+    <title>Analyze — 분석 단계</title>
+  </circle>
+  <text x="550" y="283" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#FFFFFF" font-weight="600">Analyze</text>
+  <text x="550" y="324" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1E293B">Analyze</text>
+
+  <!-- Arrows within Opts track -->
+  <line x1="181" y1="278" x2="318" y2="278" stroke="#CBD5E1" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+  <line x1="381" y1="278" x2="518" y2="278" stroke="#CBD5E1" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+
+  <!-- Release → Operate cross-band arrow -->
+  <line x1="750" y1="166" x2="750" y2="210" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <line x1="750" y1="210" x2="152" y2="247" stroke="#CBD5E1" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+
+  <!-- ─── AGENT TRACK BAND ─── -->
+  <rect x="20" y="350" width="1160" height="100" rx="10" fill="#FFEDD5" fill-opacity="0.5" stroke="#FB923C" stroke-width="1"/>
+  <text x="36" y="372" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#EA580C" letter-spacing="2">AGENT</text>
+
+  <!-- Agentize x=750 -->
+  <circle cx="750" cy="400" r="30" fill="#EA580C" stroke="#FB923C" stroke-width="2">
+    <title>Agentize — 에이전트화 단계</title>
+  </circle>
+  <text x="750" y="405" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#FFFFFF" font-weight="600">Agentize</text>
+
+  <!-- Analyze → Agentize arrow -->
+  <line x1="550" y1="308" x2="550" y2="360" stroke="#FB923C" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <line x1="550" y1="360" x2="718" y2="395" stroke="#FB923C" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+
+  <!-- ─── STANDALONE ENTRY ─── -->
+  <line x1="750" y1="15" x2="750" y2="48" stroke="#EA580C" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arrow-orange)"/>
+  <text x="760" y="32" font-family="sans-serif" font-size="11" fill="#EA580C">Standalone Project</text>
+
+  <!-- ─── UPDATE LOOP ─── -->
+  <!-- Dashed curved path from Analyze area back around below to Discover/Design -->
+  <path d="M 550,345 Q 550,455 350,460 Q 200,465 150,340" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="6 4" marker-start="url(#arrow-orange-left)"/>
+  <text x="320" y="472" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#64748B">Update</text>
+
+</svg>
