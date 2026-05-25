@@ -1,0 +1,349 @@
+{
+  "$schema_version": "1.0",
+  "$description": "GROVI 페이지의 모든 텍스트 콘텐츠. 이 파일이 단일 소스입니다. 임의 수정 금지.",
+
+  "meta": {
+    "path": "/grovi",
+    "title": "GROVI | AI 기반 시스템 구축·운영·에이전트 방법론",
+    "description": "그로브의 AI 기반 구축·운영·에이전트 방법론. 시스템 라이프사이클 전 주기를 AI로 실행·관리합니다.",
+    "lang": "ko",
+    "ogImage": "/assets/og-grovi.jpg"
+  },
+
+  "globalNav": {
+    "logo": "GROVE",
+    "menus": [
+      { "name": "About", "url": "/about/" },
+      { "name": "Services", "url": "/services/" },
+      { "name": "Works", "url": "/works/" },
+      { "name": "Contact", "url": "/contact/" }
+    ]
+  },
+
+  "servicesSubNav": {
+    "items": [
+      { "name": "GROVI", "url": "/grovi/", "active": true },
+      { "name": "Web & Mobile Platform", "url": "/webmobile-platform/", "active": false },
+      { "name": "Grove Java Framework", "url": "/grove-java-framework/", "active": false },
+      { "name": "E-Commerce Platform", "url": "/ecommerce-platform/", "active": false },
+      { "name": "System Management", "url": "/system-management/", "active": false },
+      { "name": "System Test & QA", "url": "/system-test-qa/", "active": false }
+    ]
+  },
+
+  "sections": {
+    "hero": {
+      "id": "hero",
+      "panelNum": "01",
+      "totalPanels": "08",
+      "h1": "GROVI",
+      "subtitle": "AI로 더 빠르게, 방법론으로 더 단단하게.",
+      "subCopy": "그로브의 AI 기반 구축·운영·에이전트 방법론.",
+      "annotation": "// GROVI Methodology"
+    },
+
+    "framework": {
+      "id": "framework",
+      "panelNum": "02",
+      "totalPanels": "08",
+      "annotation": "// 01. Framework",
+      "title": "시스템 라이프사이클의 AI 기반 실행·관리.",
+      "body": "GROVI는 시스템의 요구 정의부터 개발, 테스트, 운영, 고도화에 이르는 전 주기를 AI 기반으로 실행·관리하는 방법론입니다. 7개의 스테이지를 Build·Opts·Agent 3개 트랙으로 묶고, Analyze에서 Discover·Design으로 되돌아오는 Update 루프와, Agent 트랙은 Analyze 환류 또는 단독 프로젝트로 진입할 수 있습니다.",
+      "diagram": {
+        "src": "assets/diagrams/framework.svg",
+        "alt": "GROVI 프레임워크 — 7단계 × 3트랙 다이어그램"
+      },
+      "stageIndex": [
+        { "name": "Discover", "desc": "비즈니스 요구 정의와 사용자 컨텍스트 분석" },
+        { "name": "Design", "desc": "시스템 아키텍처와 인터페이스 설계" },
+        { "name": "Build", "desc": "AI 코딩 에이전트 기반 구현" },
+        { "name": "Release", "desc": "평가를 통과한 산출물의 배포" },
+        { "name": "Operate", "desc": "운영 데이터 수집과 모니터링" },
+        { "name": "Optimize", "desc": "운영 인사이트 기반 개선" },
+        { "name": "Analyze", "desc": "시스템 동작 분석과 에이전트화 가능성 평가" },
+        { "name": "Agentize", "desc": "자율 의사결정 및 도구 호출 능력 부여" }
+      ]
+    },
+
+    "tracks": [
+      {
+        "id": "build",
+        "panelNumFlow": "03",
+        "panelNumDetail": "04",
+        "totalPanels": "08",
+        "name": "Build",
+        "annotation": "// 02. Build Track",
+        "title": "Build 트랙 — 요구 정의에서 배포까지.",
+        "intro": "Build 트랙은 시스템을 0에서 1로 만드는 전 과정을 담당합니다. 일반적인 시스템 구축 프로세스의 4개 단계 — 요구 정의(Discover), 분석·설계(Design), 개발(Build), 테스트·배포(Release) — 를 AI 코딩 에이전트와 평가 하네스로 가속합니다.",
+        "diagram": {
+          "src": "assets/diagrams/build-flow.svg",
+          "alt": "Build 트랙 플로우 — Discover, Design, Build, Release 4단계와 각 서브 프로세스"
+        },
+        "color": {
+          "bg": "#DBEAFE",
+          "border": "#60A5FA",
+          "accent": "#2563EB"
+        },
+        "phases": [
+          {
+            "num": 1,
+            "name": "Discover",
+            "subProcesses": [
+              "비즈니스 환경 분석",
+              "이해관계자 인터뷰",
+              "사용자 리서치",
+              "요구사항 정의",
+              "성공 지표(KPI) 수립"
+            ],
+            "detail": {
+              "purpose": "만들 시스템이 무엇을 해결해야 하는지 정의",
+              "activities": "환경 분석, 이해관계자 인터뷰, 사용자 리서치, 요구사항 정의, KPI 수립",
+              "ai": "인터뷰 요약, 시장·경쟁 리서치, 요구사항 분류·우선순위화",
+              "out": "비즈니스 요구 정의서, 페르소나, 요구사항 리스트, KPI"
+            }
+          },
+          {
+            "num": 2,
+            "name": "Design",
+            "subProcesses": [
+              "시스템 아키텍처 설계",
+              "데이터 모델링",
+              "UI/UX 설계",
+              "API 계약 정의",
+              "프로토타이핑"
+            ],
+            "detail": {
+              "purpose": "시스템을 어떻게 만들지 결정",
+              "activities": "아키텍처 설계, 데이터 모델링, UI/UX 설계, API 계약, 프로토타이핑",
+              "ai": "아키텍처 패턴 제안, UI 와이어프레임 생성, API 명세 초안, 스키마 추천",
+              "out": "아키텍처 다이어그램, 데이터 모델, OpenAPI 명세, UI 디자인, 프로토타입"
+            }
+          },
+          {
+            "num": 3,
+            "name": "Build",
+            "subProcesses": [
+              "Frontend 개발",
+              "Backend 개발",
+              "DB 구축·통합",
+              "자동 테스트 작성",
+              "평가 하네스 실행"
+            ],
+            "detail": {
+              "purpose": "명세에 따른 시스템 구현",
+              "activities": "Frontend·Backend 개발, DB 구축, 통합, 자동 테스트 작성, 평가 하네스 운영",
+              "ai": "코드 생성·리팩토링, 자동 테스트 생성, 코드 리뷰 보조, 정적 분석",
+              "out": "소스 코드, 자동 테스트, 평가 리포트, 빌드 아티팩트"
+            }
+          },
+          {
+            "num": 4,
+            "name": "Release",
+            "subProcesses": [
+              "통합·시스템 테스트",
+              "UAT (사용자 인수)",
+              "점진적 롤아웃",
+              "운영 환경 이관",
+              "모니터링 셋업"
+            ],
+            "detail": {
+              "purpose": "평가 통과 산출물을 안전하게 운영 환경에 반영",
+              "activities": "통합·시스템 테스트, UAT, 점진적 롤아웃, 운영 이관, 모니터링 셋업",
+              "ai": "배포 리스크 평가, 로그·메트릭 이상 탐지, 롤백 의사결정 보조",
+              "out": "배포본, 배포 리포트, 운영 핸드오버 문서, 모니터링 대시보드"
+            }
+          }
+        ]
+      },
+      {
+        "id": "opts",
+        "panelNumFlow": "05",
+        "panelNumDetail": "06",
+        "totalPanels": "08",
+        "name": "Opts",
+        "annotation": "// 03. Opts Track",
+        "title": "Opts 트랙 — 운영에서 고도화까지.",
+        "intro": "Opts 트랙은 배포된 시스템을 안정적으로 운영하고 지속적으로 개선합니다. 일반적인 시스템 운영 프로세스 — 운영(Operate), 개선(Optimize), 분석(Analyze) — 을 거치며, Analyze에서 도출된 인사이트는 Update 루프를 통해 Discover·Design 단계로 환류됩니다.",
+        "diagram": {
+          "src": "assets/diagrams/opts-flow.svg",
+          "alt": "Opts 트랙 플로우 — Operate, Optimize, Analyze 3단계와 Update 루프"
+        },
+        "color": {
+          "bg": "#DCFCE7",
+          "border": "#4ADE80",
+          "accent": "#16A34A"
+        },
+        "updateLoop": {
+          "label": "Update 루프 → Discover · Design 환류"
+        },
+        "phases": [
+          {
+            "num": 1,
+            "name": "Operate",
+            "subProcesses": [
+              "운영 모니터링",
+              "인시던트 대응",
+              "사용자 지원",
+              "SLA 추적",
+              "백업·복구"
+            ],
+            "detail": {
+              "purpose": "배포된 시스템의 안정적 운영 유지",
+              "activities": "모니터링, 인시던트 대응, 사용자 지원, SLA 추적, 백업·복구",
+              "ai": "메트릭·로그 이상 탐지, 인시던트 자동 분류, 1차 응대 보조",
+              "out": "운영 로그, 인시던트 리포트, 헬스 메트릭 대시보드, SLA 리포트"
+            }
+          },
+          {
+            "num": 2,
+            "name": "Optimize",
+            "subProcesses": [
+              "성능 튜닝",
+              "기능 점진 개선",
+              "보안 패치",
+              "A/B 테스트 운영",
+              "인프라 최적화"
+            ],
+            "detail": {
+              "purpose": "운영 인사이트를 반영한 시스템 개선 실행",
+              "activities": "성능 튜닝, 기능 개선, 보안 패치, A/B 테스트, 인프라 최적화",
+              "ai": "성능 병목 진단, A/B 결과 분석, 리팩토링 제안, 우선순위 추천",
+              "out": "최적화 결과 리포트, A/B 리포트, 성능 개선 지표, 변경 이력"
+            }
+          },
+          {
+            "num": 3,
+            "name": "Analyze",
+            "subProcesses": [
+              "사용 데이터 분석",
+              "행동 패턴 분석",
+              "시스템 한계 평가",
+              "개선 방향 도출",
+              "에이전트화 적합성 검토"
+            ],
+            "detail": {
+              "purpose": "시스템 동작 패턴 분석과 다음 진화 방향 평가",
+              "activities": "사용 데이터 분석, 행동 패턴, 한계 평가, 개선 방향 도출, 에이전트화 적합성",
+              "ai": "패턴 클러스터링, 이상 행동 탐지, 인사이트 요약, 개선 가설 생성",
+              "out": "사용 패턴 분석 리포트, Update 피드백 패키지, 에이전트화 적합성 평가서"
+            }
+          }
+        ]
+      },
+      {
+        "id": "agent",
+        "panelNumFlow": "07",
+        "panelNumDetail": "08",
+        "totalPanels": "08",
+        "name": "Agent",
+        "annotation": "// 04. Agent Track",
+        "title": "Agent 트랙 — 시스템에서 에이전트로.",
+        "intro": "Agent 트랙은 자율 에이전트의 개발과 운영을 담당합니다. 두 가지 진입 경로 — Opts 트랙의 Analyze에서 기존 시스템을 에이전트화하거나, 처음부터 단독 프로젝트로 에이전트를 개발 — 가 있습니다. 일반적인 에이전트 개발 프로세스 4단계 — 전략·기획(Strategy), 설계(Design), 구축(Build), 점진적 배포(Deploy) — 를 거칩니다.",
+        "diagram": {
+          "src": "assets/diagrams/agent-flow.svg",
+          "alt": "Agent 트랙 플로우 — 듀얼 진입(Analyze/Standalone)과 Strategy, Design, Build, Deploy 4단계"
+        },
+        "color": {
+          "bg": "#FFEDD5",
+          "border": "#FB923C",
+          "accent": "#EA580C"
+        },
+        "entries": [
+          {
+            "type": "from-opts",
+            "label": "Analyze (Opts)",
+            "sublabel": "기존 시스템 환류"
+          },
+          {
+            "type": "standalone",
+            "label": "Standalone Project",
+            "sublabel": "신규 프로젝트"
+          }
+        ],
+        "phases": [
+          {
+            "num": 1,
+            "name": "Strategy",
+            "subProcesses": [
+              "자율화 영역 정의",
+              "사용 시나리오 설계",
+              "권한 모델 수립",
+              "안전 가드레일 정책",
+              "성공 지표 정의"
+            ],
+            "detail": {
+              "purpose": "에이전트화 범위와 거버넌스 정의",
+              "activities": "자율화 영역 정의, 사용 시나리오, 권한 모델, 안전 가드레일 정책, KPI",
+              "ai": "유사 사례 리서치, 위험·이익 분석 보조, 시나리오 생성",
+              "out": "에이전트 전략 문서, 범위·권한 모델, 거버넌스 정책"
+            }
+          },
+          {
+            "num": 2,
+            "name": "Design",
+            "subProcesses": [
+              "도구셋(Tool) 정의",
+              "프롬프트·정책 설계",
+              "평가 시나리오",
+              "거버넌스 설계",
+              "인간 개입 지점"
+            ],
+            "detail": {
+              "purpose": "에이전트의 도구·정책·평가 체계 설계",
+              "activities": "도구셋 정의, 프롬프트·정책 설계, 평가 시나리오 작성, 인간 개입 지점 설계",
+              "ai": "프롬프트 초안 생성, 도구 호출 패턴 추천, 평가 케이스 생성",
+              "out": "도구 호출 인터페이스 명세, 정책·프롬프트 설계서, 평가 시나리오 세트"
+            }
+          },
+          {
+            "num": 3,
+            "name": "Build",
+            "subProcesses": [
+              "에이전트 구현",
+              "평가 하네스 구축",
+              "시뮬레이션 운영",
+              "트레이스 분석",
+              "안전성 검증"
+            ],
+            "detail": {
+              "purpose": "에이전트 구현 및 안전성 검증",
+              "activities": "에이전트 구현, 평가 하네스 구축, 시뮬레이션, 트레이스 분석, 안전성·정렬성 검증",
+              "ai": "코드 생성, 시뮬레이션 실행, 트레이스 자동 분석, 안전 점검",
+              "out": "에이전트 구현체, 평가 하네스, 시뮬레이션 리포트, 안전성 평가서"
+            }
+          },
+          {
+            "num": 4,
+            "name": "Deploy",
+            "subProcesses": [
+              "Shadow (백그라운드 판단)",
+              "Suggest (승인 후 실행)",
+              "Act (자율 실행)",
+              "감사·모니터링",
+              "권한 확장"
+            ],
+            "detail": {
+              "purpose": "점진적 권한 위임으로 자율 운영 단계 도달",
+              "activities": "Shadow → Suggest → Act 단계적 권한 위임, 감사·모니터링, 권한 확장",
+              "ai": "행동 트레이스 실시간 분석, 이상 패턴 탐지, 권한 확장 판단 보조",
+              "out": "단계별 배포 리포트, 운영 거버넌스 매뉴얼, 권한 위임 이력"
+            }
+          }
+        ]
+      }
+    ],
+
+    "footer": {
+      "id": "footer",
+      "heading": "도움이 필요하신가요?",
+      "subheading": "전문가와 이야기해 보세요.",
+      "cta": {
+        "label": "Contact us",
+        "url": "/contact/"
+      },
+      "siteFooter": {
+        "copy": "GROVE  ·  grovesoft.net  ·  © 2026"
+      }
+    }
+  }
+}
