@@ -1,60 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="100%" role="img" aria-labelledby="build-title build-desc">
-  <title id="build-title">Build 트랙 흐름도</title>
-  <desc id="build-desc">GROVI Build 트랙의 4단계: Discover, Design, Build, Release와 각 단계 간 핸드오프를 보여주는 흐름도</desc>
-
+<svg viewBox="0 0 1100 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Build 트랙 플로우 — Discover, Design, Build, Release">
+  <title>Build Track Flow</title>
   <defs>
-    <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#60A5FA"/>
+    <marker id="arr" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto">
+      <polyline points="1,1 9,4 1,7" fill="none" stroke="#0D1B6E" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+    </marker>
+    <marker id="arr-dn" markerWidth="8" markerHeight="10" refX="4" refY="8" orient="auto">
+      <polyline points="1,1 4,9 7,1" fill="none" stroke="#0D1B6E" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+    </marker>
+    <marker id="arr-faint" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto">
+      <polyline points="1,1 9,4 1,7" fill="none" stroke="#0D1B6E" stroke-width="1" opacity="0.4" stroke-linejoin="round" stroke-linecap="round"/>
     </marker>
   </defs>
 
-  <!-- Stage 1: Discover -->
-  <rect x="30" y="30" width="220" height="120" rx="12" fill="rgba(67,56,202,0.15)" stroke="#93C5FD" stroke-width="1.5"/>
-  <text x="48" y="68" font-family="'Courier New', monospace" font-size="28" fill="#93C5FD" font-weight="700">01</text>
-  <text x="48" y="96" font-family="sans-serif" font-size="16" fill="#FFFFFF" font-weight="600" letter-spacing="1">DISCOVER</text>
-  <text x="48" y="118" font-family="sans-serif" font-size="12" fill="#94A3B8">시장 · 사용자 리서치</text>
-  <text x="48" y="134" font-family="sans-serif" font-size="12" fill="#94A3B8">기회 발굴</text>
+  <!-- AI AGENT drop label -->
+  <text x="558" y="22" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5" fill="#0D1B6E" font-weight="600" letter-spacing="1.5">AI AGENT</text>
+  <line x1="558" y1="26" x2="558" y2="80" stroke="#0D1B6E" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#arr-dn)"/>
 
-  <!-- Handoff label 1 -->
-  <text x="263" y="87" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94A3B8">요구</text>
-  <text x="263" y="100" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94A3B8">정의서</text>
+  <!-- Connection lines (behind nodes) -->
+  <line x1="196" y1="150" x2="282" y2="150" stroke="#0D1B6E" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="406" y1="150" x2="492" y2="150" stroke="#0D1B6E" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="660" y="133" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8" fill="#0D1B6E" opacity="0.6" letter-spacing="0.5">EVAL HARNESS</text>
+  <line x1="624" y1="150" x2="720" y2="150" stroke="#0D1B6E" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="856" y1="150" x2="940" y2="150" stroke="#0D1B6E" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr-faint)"/>
+  <text x="960" y="145" text-anchor="start" font-family="'JetBrains Mono','Courier New',monospace" font-size="8" fill="#0D1B6E" opacity="0.5">XCIPE.FLOW</text>
+  <text x="960" y="158" text-anchor="start" font-family="'JetBrains Mono','Courier New',monospace" font-size="8" fill="#0D1B6E" opacity="0.5">→ Opts Track</text>
 
-  <!-- Arrow 1→2 -->
-  <line x1="252" y1="90" x2="298" y2="90" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <!-- Node: Discover -->
+  <circle cx="132" cy="150" r="64" fill="none" stroke="#0D1B6E" stroke-width="1.5"/>
+  <text x="132" y="146" text-anchor="middle" font-family="'Pretendard','Apple SD Gothic Neo',sans-serif" font-size="13" font-weight="700" fill="#0D1B6E">Discover</text>
+  <text x="132" y="163" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="#0D1B6E" opacity="0.4">01</text>
 
-  <!-- Stage 2: Design -->
-  <rect x="310" y="30" width="220" height="120" rx="12" fill="rgba(67,56,202,0.15)" stroke="#93C5FD" stroke-width="1.5"/>
-  <text x="328" y="68" font-family="'Courier New', monospace" font-size="28" fill="#93C5FD" font-weight="700">02</text>
-  <text x="328" y="96" font-family="sans-serif" font-size="16" fill="#FFFFFF" font-weight="600" letter-spacing="1">DESIGN</text>
-  <text x="328" y="118" font-family="sans-serif" font-size="12" fill="#94A3B8">아키텍처 · UI/UX</text>
-  <text x="328" y="134" font-family="sans-serif" font-size="12" fill="#94A3B8">프로토타입</text>
+  <!-- Node: Design -->
+  <circle cx="344" cy="150" r="64" fill="none" stroke="#0D1B6E" stroke-width="1.5"/>
+  <text x="344" y="146" text-anchor="middle" font-family="'Pretendard','Apple SD Gothic Neo',sans-serif" font-size="13" font-weight="700" fill="#0D1B6E">Design</text>
+  <text x="344" y="163" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="#0D1B6E" opacity="0.4">02</text>
 
-  <!-- Handoff label 2 -->
-  <text x="543" y="87" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94A3B8">설계</text>
-  <text x="543" y="100" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94A3B8">명세서</text>
+  <!-- Node: Build (filled / active) -->
+  <circle cx="558" cy="150" r="64" fill="#0D1B6E" stroke="#0D1B6E" stroke-width="1.5"/>
+  <text x="558" y="146" text-anchor="middle" font-family="'Pretendard','Apple SD Gothic Neo',sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Build</text>
+  <text x="558" y="163" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(255,255,255,0.45)">03</text>
 
-  <!-- Arrow 2→3 -->
-  <line x1="532" y1="90" x2="578" y2="90" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <!-- Node: Release -->
+  <circle cx="788" cy="150" r="64" fill="none" stroke="#0D1B6E" stroke-width="1.5"/>
+  <text x="788" y="146" text-anchor="middle" font-family="'Pretendard','Apple SD Gothic Neo',sans-serif" font-size="13" font-weight="700" fill="#0D1B6E">Release</text>
+  <text x="788" y="163" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="#0D1B6E" opacity="0.4">04</text>
 
-  <!-- Stage 3: Build -->
-  <rect x="590" y="30" width="220" height="120" rx="12" fill="rgba(67,56,202,0.15)" stroke="#93C5FD" stroke-width="1.5"/>
-  <text x="608" y="68" font-family="'Courier New', monospace" font-size="28" fill="#93C5FD" font-weight="700">03</text>
-  <text x="608" y="96" font-family="sans-serif" font-size="16" fill="#FFFFFF" font-weight="600" letter-spacing="1">BUILD</text>
-  <text x="608" y="118" font-family="sans-serif" font-size="12" fill="#94A3B8">개발 · 테스트</text>
-  <text x="608" y="134" font-family="sans-serif" font-size="12" fill="#94A3B8">품질 검증</text>
+  <!-- Sub-labels below nodes -->
+  <text x="132" y="232" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8" fill="#0D1B6E" opacity="0.45">비즈니스 요구정의</text>
+  <text x="344" y="232" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8" fill="#0D1B6E" opacity="0.45">아키텍처·UI 설계</text>
+  <text x="558" y="232" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8" fill="#0D1B6E" opacity="0.45">AI 코딩 에이전트</text>
+  <text x="788" y="232" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8" fill="#0D1B6E" opacity="0.45">평가 통과 배포</text>
 
-  <!-- Handoff label 3 -->
-  <text x="823" y="87" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94A3B8">릴리즈</text>
-  <text x="823" y="100" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94A3B8">패키지</text>
-
-  <!-- Arrow 3→4 -->
-  <line x1="812" y1="90" x2="858" y2="90" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow-blue)"/>
-
-  <!-- Stage 4: Release -->
-  <rect x="870" y="30" width="220" height="120" rx="12" fill="rgba(67,56,202,0.15)" stroke="#93C5FD" stroke-width="1.5"/>
-  <text x="888" y="68" font-family="'Courier New', monospace" font-size="28" fill="#93C5FD" font-weight="700">04</text>
-  <text x="888" y="96" font-family="sans-serif" font-size="16" fill="#FFFFFF" font-weight="600" letter-spacing="1">RELEASE</text>
-  <text x="888" y="118" font-family="sans-serif" font-size="12" fill="#94A3B8">배포 · 론칭</text>
-  <text x="888" y="134" font-family="sans-serif" font-size="12" fill="#94A3B8">시장 출시</text>
-
+  <!-- Bottom annotation -->
+  <text x="50" y="285" font-family="'JetBrains Mono','Courier New',monospace" font-size="8" fill="#0D1B6E" opacity="0.3" letter-spacing="0.5">Build Track  ·  AI Implementation Methodology</text>
+  <text x="850" y="285" text-anchor="end" font-family="'JetBrains Mono','Courier New',monospace" font-size="8" fill="#0D1B6E" opacity="0.3">Human in the loop</text>
 </svg>

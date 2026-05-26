@@ -14,6 +14,12 @@
   --color-indigo-dark: #312E81;    /* 인디고 어둠 */
   --color-indigo-light: #EEF2FF;   /* 인디고 라이트 */
 
+  /* ─── COLOR · ELIX PATTERN ─── */
+  --color-yellow: #CCFF00;         /* 네온 옐로우 — 슬래시·트랙명 (ELIX 시그니처) */
+  --color-navy: #0D1B6E;           /* 딥 네이비 — 콘텐츠 텍스트·다이어그램 */
+  --color-panel-grey-1: #D8D8D8;   /* 비주얼 패널 상단 */
+  --color-panel-grey-2: #888888;   /* 비주얼 패널 하단 */
+
   /* ─── COLOR · TEXT ─── */
   --text-primary: #1E293B;         /* 본문 (라이트 배경) */
   --text-secondary: #64748B;       /* 보조 (라이트 배경) */
