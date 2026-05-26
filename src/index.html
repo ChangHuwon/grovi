@@ -3,22 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#000033" />
-
+  <meta name="theme-color" content="#0D1B6E" />
   <title>GROVI | AI 기반 시스템 구축·운영·에이전트 방법론</title>
   <meta name="description" content="그로브의 AI 기반 구축·운영·에이전트 방법론. 시스템 라이프사이클 전 주기를 AI로 실행·관리합니다." />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="GROVI | AI 기반 시스템 구축·운영·에이전트 방법론" />
   <meta property="og:description" content="그로브의 AI 기반 구축·운영·에이전트 방법론" />
   <meta property="og:locale" content="ko_KR" />
-
-  <!-- Pretendard 폰트 -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
-
-  <!-- Styles -->
   <link rel="stylesheet" href="styles/tokens.css" />
   <link rel="stylesheet" href="styles/components.css" />
   <link rel="stylesheet" href="styles/sections.css" />
@@ -28,686 +21,329 @@
   <!-- Skip Link -->
   <a class="skip-link" href="#main">본문으로 건너뛰기</a>
 
-  <!-- ═══════════════════════════════════════════
-       GLOBAL NAV
-  ═══════════════════════════════════════════ -->
+  <!-- ════════════════════════════════════════
+       GLOBAL NAV — minimal (ELIX style)
+  ════════════════════════════════════════ -->
   <header class="global-nav" role="banner">
-    <div class="global-nav__inner container">
-      <a class="global-nav__logo" href="/" aria-label="GROVE 홈">GROVE</a>
-      <nav class="global-nav__menu" aria-label="주 내비게이션">
-        <a class="global-nav__link" href="/about/">About</a>
-        <a class="global-nav__link" href="/services/">Services</a>
-        <a class="global-nav__link" href="/works/">Works</a>
-        <a class="global-nav__link" href="/contact/">Contact</a>
-      </nav>
-      <button class="global-nav__toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <!-- SERVICES SUB-NAV -->
-    <nav class="services-sub-nav" aria-label="서비스 내비게이션">
-      <div class="services-sub-nav__inner container">
-        <a class="services-sub-nav__item services-sub-nav__item--active" href="/grovi/" aria-current="page">GROVI</a>
-        <a class="services-sub-nav__item" href="/webmobile-platform/">Web &amp; Mobile Platform</a>
-        <a class="services-sub-nav__item" href="/grove-java-framework/">Grove Java Framework</a>
-        <a class="services-sub-nav__item" href="/ecommerce-platform/">E-Commerce Platform</a>
-        <a class="services-sub-nav__item" href="/system-management/">System Management</a>
-        <a class="services-sub-nav__item" href="/system-test-qa/">System Test &amp; QA</a>
-      </div>
+    <a class="global-nav__logo" href="/" aria-label="GROVE 홈">GROVE</a>
+    <button class="global-nav__toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mobile-menu" class="global-nav__menu" aria-label="주 내비게이션" hidden>
+      <a class="global-nav__link" href="/about/">About</a>
+      <a class="global-nav__link" href="/services/">Services</a>
+      <a class="global-nav__link" href="/works/">Works</a>
+      <a class="global-nav__link" href="/contact/">Contact</a>
     </nav>
   </header>
 
-  <!-- PANEL COUNTER (우측 고정) -->
+  <!-- Panel Counter (fixed right) -->
   <aside class="panel-counter" aria-label="현재 섹션 위치" aria-live="polite">
     <span class="panel-counter__current">01</span>
-    <span class="panel-counter__divider" aria-hidden="true">/</span>
+    <span class="panel-counter__divider">/</span>
     <span class="panel-counter__total">08</span>
   </aside>
 
-  <!-- ═══════════════════════════════════════════
-       MAIN CONTENT
-  ═══════════════════════════════════════════ -->
+  <!-- ════════════════════════════════════════
+       MAIN
+  ════════════════════════════════════════ -->
   <main id="main">
 
-    <!-- ─────────────────────────────────────
-         01/08  HERO
-    ───────────────────────────────────── -->
-    <section id="hero" class="section section--dark hero" aria-label="GROVI 히어로">
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <p class="annotation annotation--on-dark hero__annotation fade-in-up">// GROVI Methodology</p>
-          <h1 class="hero__title fade-in-up">GROVI</h1>
-          <p class="hero__subtitle fade-in-up">AI로 더 빠르게, 방법론으로 더 단단하게.</p>
-          <p class="hero__sub-copy fade-in-up">그로브의 AI 기반 구축·운영·에이전트 방법론.</p>
+    <!-- ─── 01/08  HERO ─── -->
+    <section id="hero" class="section section--dark hero-section" aria-label="GROVI 소개">
+      <div class="hero-inner">
+        <div class="hero-left fade-in-up">
+          <p class="annotation annotation--on-dark">// GROVI Methodology</p>
+          <h1 class="hero-title">GROVI</h1>
+          <p class="hero-subtitle">AI로 더 빠르게, 방법론으로 더 단단하게.</p>
+          <p class="hero-subcopy">그로브의 AI 기반 구축·운영·에이전트 방법론.</p>
         </div>
-        <div class="hero__scroll-indicator" aria-hidden="true">
-          <span class="hero__scroll-label">scroll</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <div class="hero-right fade-in-up" aria-hidden="true">
+          <!-- Architecture overview SVG (inline) -->
+          <svg class="hero-arch-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="hy" markerWidth="7" markerHeight="7" refX="3" refY="3.5" orient="auto">
+                <polyline points="0,1 6,3.5 0,6" fill="none" stroke="rgba(204,255,0,0.7)" stroke-width="1.2" stroke-linecap="round"/>
+              </marker>
+              <marker id="hw" markerWidth="7" markerHeight="7" refX="3" refY="3.5" orient="auto">
+                <polyline points="0,1 6,3.5 0,6" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1" stroke-linecap="round"/>
+              </marker>
+            </defs>
+            <!-- Outer dashed ring -->
+            <circle cx="250" cy="250" r="218" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="5 6"/>
+            <!-- Middle ring -->
+            <circle cx="250" cy="250" r="148" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.75"/>
+            <!-- Core box: GROVI -->
+            <rect x="190" y="215" width="120" height="70" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="1.25" rx="2"/>
+            <text x="250" y="240" text-anchor="middle" fill="rgba(204,255,0,0.9)" font-family="'JetBrains Mono',monospace" font-size="10" font-weight="800" letter-spacing="3">GROVI</text>
+            <text x="250" y="256" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="'JetBrains Mono',monospace" font-size="7" letter-spacing="2">METHODOLOGY</text>
+            <text x="250" y="273" text-anchor="middle" fill="rgba(255,255,255,0.25)" font-family="'JetBrains Mono',monospace" font-size="6.5" letter-spacing="1">AI Platform</text>
+            <!-- / BUILD top -->
+            <line x1="250" y1="32" x2="250" y2="100" stroke="rgba(204,255,0,0.5)" stroke-width="1" marker-end="url(#hy)"/>
+            <text x="250" y="24" text-anchor="middle" fill="rgba(204,255,0,0.9)" font-family="'Pretendard',sans-serif" font-size="11" font-weight="800" letter-spacing="1">/ BUILD</text>
+            <text x="250" y="12" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-family="'JetBrains Mono',monospace" font-size="7">AI 구축방법론</text>
+            <!-- / OPTS bottom-left -->
+            <line x1="108" y1="388" x2="170" y2="318" stroke="rgba(204,255,0,0.5)" stroke-width="1" marker-end="url(#hy)"/>
+            <text x="66" y="408" text-anchor="middle" fill="rgba(204,255,0,0.9)" font-family="'Pretendard',sans-serif" font-size="11" font-weight="800" letter-spacing="1">/ OPTS</text>
+            <text x="66" y="420" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-family="'JetBrains Mono',monospace" font-size="7">AI 운영방법론</text>
+            <!-- / AGENT bottom-right -->
+            <line x1="392" y1="388" x2="330" y2="318" stroke="rgba(204,255,0,0.5)" stroke-width="1" marker-end="url(#hy)"/>
+            <text x="434" y="408" text-anchor="middle" fill="rgba(204,255,0,0.9)" font-family="'Pretendard',sans-serif" font-size="11" font-weight="800" letter-spacing="1">/ AGENT</text>
+            <text x="434" y="420" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-family="'JetBrains Mono',monospace" font-size="7">AI 에이전트</text>
+            <!-- Stage dots on outer ring -->
+            <circle cx="378" cy="100" r="3.5" fill="rgba(255,255,255,0.35)"/>
+            <text x="392" y="98" text-anchor="start" fill="rgba(255,255,255,0.4)" font-family="'JetBrains Mono',monospace" font-size="7">Discover</text>
+            <circle cx="436" cy="186" r="3.5" fill="rgba(255,255,255,0.35)"/>
+            <text x="444" y="184" text-anchor="start" fill="rgba(255,255,255,0.4)" font-family="'JetBrains Mono',monospace" font-size="7">Design</text>
+            <circle cx="456" cy="274" r="3.5" fill="rgba(255,255,255,0.35)"/>
+            <text x="464" y="272" text-anchor="start" fill="rgba(255,255,255,0.4)" font-family="'JetBrains Mono',monospace" font-size="7">Build</text>
+            <circle cx="420" cy="356" r="3.5" fill="rgba(255,255,255,0.35)"/>
+            <text x="428" y="354" text-anchor="start" fill="rgba(255,255,255,0.4)" font-family="'JetBrains Mono',monospace" font-size="7">Release</text>
+            <circle cx="250" cy="468" r="3.5" fill="rgba(255,255,255,0.35)"/>
+            <text x="258" y="466" text-anchor="start" fill="rgba(255,255,255,0.4)" font-family="'JetBrains Mono',monospace" font-size="7">Operate · Optimize · Analyze</text>
+            <!-- Update loop arc -->
+            <path d="M 140,420 Q 50,250 122,100" fill="none" stroke="rgba(204,255,0,0.22)" stroke-width="1" stroke-dasharray="5 5"/>
+            <text x="14" y="245" fill="rgba(204,255,0,0.3)" font-family="'JetBrains Mono',monospace" font-size="6.5" transform="rotate(-90,14,245)">Update Loop</text>
           </svg>
         </div>
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────
-         02/08  FRAMEWORK
-    ───────────────────────────────────── -->
-    <section id="framework" class="section section--light framework" aria-label="GROVI 프레임워크">
+    <!-- ─── 02/08  FRAMEWORK ─── -->
+    <section id="framework" class="section section--light framework-section" aria-label="GROVI 프레임워크">
       <div class="container">
         <header class="section-header fade-in-up">
           <p class="annotation">// 01. Framework</p>
-          <h2 class="section-header__title">시스템 라이프사이클의 AI 기반 실행·관리.</h2>
+          <h2 class="section-title">시스템 라이프사이클의 AI 기반 실행·관리.</h2>
         </header>
-        <p class="framework__body fade-in-up">
-          GROVI는 시스템의 요구 정의부터 개발, 테스트, 운영, 고도화에 이르는 전 주기를 AI 기반으로 실행·관리하는 방법론입니다. 7개의 스테이지를 Build·Opts·Agent 3개 트랙으로 묶고, Analyze에서 Discover·Design으로 되돌아오는 Update 루프와, Agent 트랙은 Analyze 환류 또는 단독 프로젝트로 진입할 수 있습니다.
-        </p>
-
-        <!-- 프레임워크 다이어그램 -->
-        <div class="framework__diagram fade-in-up">
-          <img
-            src="../assets/diagrams/framework.svg"
-            alt="GROVI 프레임워크 — 7단계 × 3트랙 다이어그램"
-            class="framework__diagram-img"
-            loading="lazy"
-            width="1200"
-            height="480"
-          />
+        <p class="section-body fade-in-up">GROVI는 시스템의 요구 정의부터 개발, 테스트, 운영, 고도화에 이르는 전 주기를 AI 기반으로 실행·관리하는 방법론입니다. 7개의 스테이지를 Build·Opts·Agent 3개 트랙으로 묶고, Analyze에서 Discover·Design으로 되돌아오는 Update 루프와, Agent 트랙은 Analyze 환류 또는 단독 프로젝트로 진입할 수 있습니다.</p>
+        <div class="framework-diagram fade-in-up">
+          <img src="../assets/diagrams/framework.svg" alt="GROVI 프레임워크 — 3트랙 8스테이지 다이어그램" />
         </div>
-
-        <!-- Stage Index -->
         <nav class="stage-index fade-in-up" aria-label="스테이지 인덱스">
-          <button class="stage-index__item" data-target="build-flow">
-            <span class="stage-index__name">Discover</span>
-            <span class="stage-index__desc">비즈니스 요구 정의와 사용자 컨텍스트 분석</span>
-          </button>
-          <button class="stage-index__item" data-target="build-flow">
-            <span class="stage-index__name">Design</span>
-            <span class="stage-index__desc">시스템 아키텍처와 인터페이스 설계</span>
-          </button>
-          <button class="stage-index__item" data-target="build-flow">
-            <span class="stage-index__name">Build</span>
-            <span class="stage-index__desc">AI 코딩 에이전트 기반 구현</span>
-          </button>
-          <button class="stage-index__item" data-target="build-flow">
-            <span class="stage-index__name">Release</span>
-            <span class="stage-index__desc">평가를 통과한 산출물의 배포</span>
-          </button>
-          <button class="stage-index__item" data-target="opts-flow">
-            <span class="stage-index__name">Operate</span>
-            <span class="stage-index__desc">운영 데이터 수집과 모니터링</span>
-          </button>
-          <button class="stage-index__item" data-target="opts-flow">
-            <span class="stage-index__name">Optimize</span>
-            <span class="stage-index__desc">운영 인사이트 기반 개선</span>
-          </button>
-          <button class="stage-index__item" data-target="opts-flow">
-            <span class="stage-index__name">Analyze</span>
-            <span class="stage-index__desc">시스템 동작 분석과 에이전트화 가능성 평가</span>
-          </button>
-          <button class="stage-index__item" data-target="agent-flow">
-            <span class="stage-index__name">Agentize</span>
-            <span class="stage-index__desc">자율 의사결정 및 도구 호출 능력 부여</span>
-          </button>
+          <button class="stage-index-item" data-target="build-flow"><span class="stage-index-item__num">01</span><span class="stage-index-item__name">Discover</span><span class="stage-index-item__desc">비즈니스 요구 정의와 사용자 컨텍스트 분석</span></button>
+          <button class="stage-index-item" data-target="build-flow"><span class="stage-index-item__num">02</span><span class="stage-index-item__name">Design</span><span class="stage-index-item__desc">시스템 아키텍처와 인터페이스 설계</span></button>
+          <button class="stage-index-item" data-target="build-flow"><span class="stage-index-item__num">03</span><span class="stage-index-item__name">Build</span><span class="stage-index-item__desc">AI 코딩 에이전트 기반 구현</span></button>
+          <button class="stage-index-item" data-target="build-flow"><span class="stage-index-item__num">04</span><span class="stage-index-item__name">Release</span><span class="stage-index-item__desc">평가를 통과한 산출물의 배포</span></button>
+          <button class="stage-index-item" data-target="opts-flow"><span class="stage-index-item__num">05</span><span class="stage-index-item__name">Operate</span><span class="stage-index-item__desc">운영 데이터 수집과 모니터링</span></button>
+          <button class="stage-index-item" data-target="opts-flow"><span class="stage-index-item__num">06</span><span class="stage-index-item__name">Optimize</span><span class="stage-index-item__desc">운영 인사이트 기반 개선</span></button>
+          <button class="stage-index-item" data-target="opts-flow"><span class="stage-index-item__num">07</span><span class="stage-index-item__name">Analyze</span><span class="stage-index-item__desc">시스템 동작 분석과 에이전트화 가능성 평가</span></button>
+          <button class="stage-index-item" data-target="agent-flow"><span class="stage-index-item__num">08</span><span class="stage-index-item__name">Agentize</span><span class="stage-index-item__desc">자율 의사결정 및 도구 호출 능력 부여</span></button>
         </nav>
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────
-         03/08  BUILD TRACK — FLOW
-    ───────────────────────────────────── -->
-    <section id="build-flow" class="section section--dark-2 track-flow track-flow--build" aria-label="Build 트랙 플로우">
-      <div class="container">
-        <header class="section-header fade-in-up">
-          <p class="annotation annotation--on-dark">// 02. Build Track</p>
-          <h2 class="section-header__title">Build 트랙 — 요구 정의에서 배포까지.</h2>
-        </header>
-        <p class="track-flow__intro fade-in-up">
-          Build 트랙은 시스템을 0에서 1로 만드는 전 과정을 담당합니다. 일반적인 시스템 구축 프로세스의 4개 단계 — 요구 정의(Discover), 분석·설계(Design), 개발(Build), 테스트·배포(Release) — 를 AI 코딩 에이전트와 평가 하네스로 가속합니다.
-        </p>
-
-        <div class="track-container track-container--build fade-in-up">
-          <div class="phase-flow" role="list" aria-label="Build 트랙 4단계 플로우">
-
-            <article class="phase-box phase-box--build" role="listitem" tabindex="0">
-              <div class="phase-box__top-strip" aria-hidden="true"></div>
-              <div class="phase-box__header">
-                <span class="phase-box__num" aria-hidden="true">01</span>
-                <h3 class="phase-box__name">Discover</h3>
-              </div>
-              <ul class="phase-box__list">
-                <li>비즈니스 환경 분석</li>
-                <li>이해관계자 인터뷰</li>
-                <li>사용자 리서치</li>
-                <li>요구사항 정의</li>
-                <li>성공 지표(KPI) 수립</li>
-              </ul>
-            </article>
-
-            <div class="phase-arrow" aria-hidden="true">
-              <svg width="32" height="16" viewBox="0 0 32 16" fill="none"><path d="M0 8h28M22 2l8 6-8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-
-            <article class="phase-box phase-box--build" role="listitem" tabindex="0">
-              <div class="phase-box__top-strip" aria-hidden="true"></div>
-              <div class="phase-box__header">
-                <span class="phase-box__num" aria-hidden="true">02</span>
-                <h3 class="phase-box__name">Design</h3>
-              </div>
-              <ul class="phase-box__list">
-                <li>시스템 아키텍처 설계</li>
-                <li>데이터 모델링</li>
-                <li>UI/UX 설계</li>
-                <li>API 계약 정의</li>
-                <li>프로토타이핑</li>
-              </ul>
-            </article>
-
-            <div class="phase-arrow" aria-hidden="true">
-              <svg width="32" height="16" viewBox="0 0 32 16" fill="none"><path d="M0 8h28M22 2l8 6-8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-
-            <article class="phase-box phase-box--build" role="listitem" tabindex="0">
-              <div class="phase-box__top-strip" aria-hidden="true"></div>
-              <div class="phase-box__header">
-                <span class="phase-box__num" aria-hidden="true">03</span>
-                <h3 class="phase-box__name">Build</h3>
-              </div>
-              <ul class="phase-box__list">
-                <li>Frontend 개발</li>
-                <li>Backend 개발</li>
-                <li>DB 구축·통합</li>
-                <li>자동 테스트 작성</li>
-                <li>평가 하네스 실행</li>
-              </ul>
-            </article>
-
-            <div class="phase-arrow" aria-hidden="true">
-              <svg width="32" height="16" viewBox="0 0 32 16" fill="none"><path d="M0 8h28M22 2l8 6-8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-
-            <article class="phase-box phase-box--build" role="listitem" tabindex="0">
-              <div class="phase-box__top-strip" aria-hidden="true"></div>
-              <div class="phase-box__header">
-                <span class="phase-box__num" aria-hidden="true">04</span>
-                <h3 class="phase-box__name">Release</h3>
-              </div>
-              <ul class="phase-box__list">
-                <li>통합·시스템 테스트</li>
-                <li>UAT (사용자 인수)</li>
-                <li>점진적 롤아웃</li>
-                <li>운영 환경 이관</li>
-                <li>모니터링 셋업</li>
-              </ul>
-            </article>
-
-          </div>
+    <!-- ─── 03/08  BUILD FLOW (split) ─── -->
+    <section id="build-flow" class="section section--dark split-section" aria-label="Build 트랙 플로우">
+      <div class="visual-panel visual-panel--build">
+        <div class="panel-num-badge">
+          <span>03</span><span class="slash">/</span><span>08</span>
+        </div>
+        <div class="orb orb--build" aria-hidden="true"></div>
+        <div class="track-label">
+          <span class="track-slash">/</span><span class="track-name">BUILD</span>
+        </div>
+        <span class="ai-credit annotation annotation--on-dark">// build track</span>
+      </div>
+      <div class="content-panel">
+        <p class="annotation">// 02. Build Track</p>
+        <h2 class="content-panel__title">Build 트랙 — 요구 정의에서 배포까지.</h2>
+        <p class="content-panel__body">Build 트랙은 시스템을 0에서 1로 만드는 전 과정을 담당합니다. 요구 정의(Discover), 분석·설계(Design), 개발(Build), 테스트·배포(Release) 4개 단계를 AI 코딩 에이전트와 평가 하네스로 가속합니다.</p>
+        <div class="schematic-diagram fade-in-up">
+          <img src="../assets/diagrams/build-flow.svg" alt="Build 트랙 플로우 — Discover, Design, Build, Release 4단계" />
         </div>
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────
-         04/08  BUILD TRACK — DETAIL
-    ───────────────────────────────────── -->
-    <section id="build-detail" class="section section--light track-detail track-detail--build" aria-label="Build 트랙 단계별 상세">
+    <!-- ─── 04/08  BUILD DETAIL ─── -->
+    <section id="build-detail" class="section section--light detail-section" aria-label="Build 트랙 단계별 상세">
       <div class="container">
         <header class="section-header fade-in-up">
-          <p class="annotation">// 02. Build Track · Detail</p>
-          <h2 class="section-header__title">단계별 상세</h2>
+          <p class="annotation">// Build — 단계별 상세</p>
         </header>
-
-        <div class="stage-grid fade-in-up">
-
-          <article class="stage-detail-card stage-detail-card--build" tabindex="0">
-            <div class="stage-detail-card__strip" aria-hidden="true"></div>
-            <div class="stage-detail-card__body">
-              <h3 class="stage-detail-card__name">Discover</h3>
-              <dl class="stage-detail-card__axes">
-                <dt>목적</dt>
-                <dd>만들 시스템이 무엇을 해결해야 하는지 정의</dd>
-                <dt>주요 활동</dt>
-                <dd>환경 분석, 이해관계자 인터뷰, 사용자 리서치, 요구사항 정의, KPI 수립</dd>
-                <dt>AI 활용</dt>
-                <dd>인터뷰 요약, 시장·경쟁 리서치, 요구사항 분류·우선순위화</dd>
-                <dt>산출물</dt>
-                <dd>비즈니스 요구 정의서, 페르소나, 요구사항 리스트, KPI</dd>
-              </dl>
-            </div>
+        <div class="detail-grid detail-grid--4 fade-in-up">
+          <article class="detail-card detail-card--build">
+            <div class="detail-card__head"><span class="detail-card__num">01</span><h3 class="detail-card__name">Discover</h3></div>
+            <dl class="detail-card__axes">
+              <dt>목적</dt><dd>만들 시스템이 무엇을 해결해야 하는지 정의</dd>
+              <dt>주요 활동</dt><dd>환경 분석, 이해관계자 인터뷰, 사용자 리서치, 요구사항 정의, KPI 수립</dd>
+              <dt>AI 활용</dt><dd>인터뷰 요약, 시장·경쟁 리서치, 요구사항 분류·우선순위화</dd>
+              <dt>산출물</dt><dd>비즈니스 요구 정의서, 페르소나, 요구사항 리스트, KPI</dd>
+            </dl>
           </article>
-
-          <article class="stage-detail-card stage-detail-card--build" tabindex="0">
-            <div class="stage-detail-card__strip" aria-hidden="true"></div>
-            <div class="stage-detail-card__body">
-              <h3 class="stage-detail-card__name">Design</h3>
-              <dl class="stage-detail-card__axes">
-                <dt>목적</dt>
-                <dd>시스템을 어떻게 만들지 결정</dd>
-                <dt>주요 활동</dt>
-                <dd>아키텍처 설계, 데이터 모델링, UI/UX 설계, API 계약, 프로토타이핑</dd>
-                <dt>AI 활용</dt>
-                <dd>아키텍처 패턴 제안, UI 와이어프레임 생성, API 명세 초안, 스키마 추천</dd>
-                <dt>산출물</dt>
-                <dd>아키텍처 다이어그램, 데이터 모델, OpenAPI 명세, UI 디자인, 프로토타입</dd>
-              </dl>
-            </div>
+          <article class="detail-card detail-card--build">
+            <div class="detail-card__head"><span class="detail-card__num">02</span><h3 class="detail-card__name">Design</h3></div>
+            <dl class="detail-card__axes">
+              <dt>목적</dt><dd>시스템을 어떻게 만들지 결정</dd>
+              <dt>주요 활동</dt><dd>아키텍처 설계, 데이터 모델링, UI/UX 설계, API 계약, 프로토타이핑</dd>
+              <dt>AI 활용</dt><dd>아키텍처 패턴 제안, UI 와이어프레임 생성, API 명세 초안, 스키마 추천</dd>
+              <dt>산출물</dt><dd>아키텍처 다이어그램, 데이터 모델, OpenAPI 명세, UI 디자인, 프로토타입</dd>
+            </dl>
           </article>
-
-          <article class="stage-detail-card stage-detail-card--build" tabindex="0">
-            <div class="stage-detail-card__strip" aria-hidden="true"></div>
-            <div class="stage-detail-card__body">
-              <h3 class="stage-detail-card__name">Build</h3>
-              <dl class="stage-detail-card__axes">
-                <dt>목적</dt>
-                <dd>명세에 따른 시스템 구현</dd>
-                <dt>주요 활동</dt>
-                <dd>Frontend·Backend 개발, DB 구축, 통합, 자동 테스트 작성, 평가 하네스 운영</dd>
-                <dt>AI 활용</dt>
-                <dd>코드 생성·리팩토링, 자동 테스트 생성, 코드 리뷰 보조, 정적 분석</dd>
-                <dt>산출물</dt>
-                <dd>소스 코드, 자동 테스트, 평가 리포트, 빌드 아티팩트</dd>
-              </dl>
-            </div>
+          <article class="detail-card detail-card--build">
+            <div class="detail-card__head"><span class="detail-card__num">03</span><h3 class="detail-card__name">Build</h3></div>
+            <dl class="detail-card__axes">
+              <dt>목적</dt><dd>명세에 따른 시스템 구현</dd>
+              <dt>주요 활동</dt><dd>Frontend·Backend 개발, DB 구축, 통합, 자동 테스트 작성, 평가 하네스 운영</dd>
+              <dt>AI 활용</dt><dd>코드 생성·리팩토링, 자동 테스트 생성, 코드 리뷰 보조, 정적 분석</dd>
+              <dt>산출물</dt><dd>소스 코드, 자동 테스트, 평가 리포트, 빌드 아티팩트</dd>
+            </dl>
           </article>
-
-          <article class="stage-detail-card stage-detail-card--build" tabindex="0">
-            <div class="stage-detail-card__strip" aria-hidden="true"></div>
-            <div class="stage-detail-card__body">
-              <h3 class="stage-detail-card__name">Release</h3>
-              <dl class="stage-detail-card__axes">
-                <dt>목적</dt>
-                <dd>평가 통과 산출물을 안전하게 운영 환경에 반영</dd>
-                <dt>주요 활동</dt>
-                <dd>통합·시스템 테스트, UAT, 점진적 롤아웃, 운영 이관, 모니터링 셋업</dd>
-                <dt>AI 활용</dt>
-                <dd>배포 리스크 평가, 로그·메트릭 이상 탐지, 롤백 의사결정 보조</dd>
-                <dt>산출물</dt>
-                <dd>배포본, 배포 리포트, 운영 핸드오버 문서, 모니터링 대시보드</dd>
-              </dl>
-            </div>
+          <article class="detail-card detail-card--build">
+            <div class="detail-card__head"><span class="detail-card__num">04</span><h3 class="detail-card__name">Release</h3></div>
+            <dl class="detail-card__axes">
+              <dt>목적</dt><dd>평가 통과 산출물을 안전하게 운영 환경에 반영</dd>
+              <dt>주요 활동</dt><dd>통합·시스템 테스트, UAT, 점진적 롤아웃, 운영 이관, 모니터링 셋업</dd>
+              <dt>AI 활용</dt><dd>배포 리스크 평가, 로그·메트릭 이상 탐지, 롤백 의사결정 보조</dd>
+              <dt>산출물</dt><dd>배포본, 배포 리포트, 운영 핸드오버 문서, 모니터링 대시보드</dd>
+            </dl>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────
-         05/08  OPTS TRACK — FLOW
-    ───────────────────────────────────── -->
-    <section id="opts-flow" class="section section--dark-2 track-flow track-flow--opts" aria-label="Opts 트랙 플로우">
-      <div class="container">
-        <header class="section-header fade-in-up">
-          <p class="annotation annotation--on-dark">// 03. Opts Track</p>
-          <h2 class="section-header__title">Opts 트랙 — 운영에서 고도화까지.</h2>
-        </header>
-        <p class="track-flow__intro fade-in-up">
-          Opts 트랙은 배포된 시스템을 안정적으로 운영하고 지속적으로 개선합니다. 일반적인 시스템 운영 프로세스 — 운영(Operate), 개선(Optimize), 분석(Analyze) — 을 거치며, Analyze에서 도출된 인사이트는 Update 루프를 통해 Discover·Design 단계로 환류됩니다.
-        </p>
-
-        <div class="track-container track-container--opts fade-in-up">
-          <div class="phase-flow phase-flow--3" role="list" aria-label="Opts 트랙 3단계 플로우">
-
-            <article class="phase-box phase-box--opts" role="listitem" tabindex="0">
-              <div class="phase-box__top-strip" aria-hidden="true"></div>
-              <div class="phase-box__header">
-                <span class="phase-box__num" aria-hidden="true">01</span>
-                <h3 class="phase-box__name">Operate</h3>
-              </div>
-              <ul class="phase-box__list">
-                <li>운영 모니터링</li>
-                <li>인시던트 대응</li>
-                <li>사용자 지원</li>
-                <li>SLA 추적</li>
-                <li>백업·복구</li>
-              </ul>
-            </article>
-
-            <div class="phase-arrow" aria-hidden="true">
-              <svg width="32" height="16" viewBox="0 0 32 16" fill="none"><path d="M0 8h28M22 2l8 6-8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-
-            <article class="phase-box phase-box--opts" role="listitem" tabindex="0">
-              <div class="phase-box__top-strip" aria-hidden="true"></div>
-              <div class="phase-box__header">
-                <span class="phase-box__num" aria-hidden="true">02</span>
-                <h3 class="phase-box__name">Optimize</h3>
-              </div>
-              <ul class="phase-box__list">
-                <li>성능 튜닝</li>
-                <li>기능 점진 개선</li>
-                <li>보안 패치</li>
-                <li>A/B 테스트 운영</li>
-                <li>인프라 최적화</li>
-              </ul>
-            </article>
-
-            <div class="phase-arrow" aria-hidden="true">
-              <svg width="32" height="16" viewBox="0 0 32 16" fill="none"><path d="M0 8h28M22 2l8 6-8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-
-            <article class="phase-box phase-box--opts" role="listitem" tabindex="0">
-              <div class="phase-box__top-strip" aria-hidden="true"></div>
-              <div class="phase-box__header">
-                <span class="phase-box__num" aria-hidden="true">03</span>
-                <h3 class="phase-box__name">Analyze</h3>
-              </div>
-              <ul class="phase-box__list">
-                <li>사용 데이터 분석</li>
-                <li>행동 패턴 분석</li>
-                <li>시스템 한계 평가</li>
-                <li>개선 방향 도출</li>
-                <li>에이전트화 적합성 검토</li>
-              </ul>
-            </article>
-
-          </div>
-
-          <!-- Update Loop 시각화 -->
-          <div class="update-loop" aria-label="Update 루프 — Discover, Design 환류">
-            <div class="update-loop__line" aria-hidden="true">
-              <svg viewBox="0 0 800 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <path d="M780 30 H 40 Q 20 30 20 10" stroke="#4ADE80" stroke-width="1.5" stroke-dasharray="6 4" stroke-linecap="round"/>
-                <path d="M10 30 L 25 20 L 25 40 Z" fill="#4ADE80"/>
-              </svg>
-            </div>
-            <p class="update-loop__label">Update 루프 → Discover · Design 환류</p>
-          </div>
+    <!-- ─── 05/08  OPTS FLOW (split) ─── -->
+    <section id="opts-flow" class="section section--dark split-section" aria-label="Opts 트랙 플로우">
+      <div class="visual-panel visual-panel--opts">
+        <div class="panel-num-badge">
+          <span>05</span><span class="slash">/</span><span>08</span>
+        </div>
+        <div class="orb orb--opts" aria-hidden="true"></div>
+        <div class="track-label">
+          <span class="track-slash">/</span><span class="track-name">OPTS</span>
+        </div>
+        <span class="ai-credit annotation annotation--on-dark">// opts track</span>
+      </div>
+      <div class="content-panel">
+        <p class="annotation">// 03. Opts Track</p>
+        <h2 class="content-panel__title">Opts 트랙 — 운영에서 고도화까지.</h2>
+        <p class="content-panel__body">Opts 트랙은 배포된 시스템을 안정적으로 운영하고 지속적으로 개선합니다. 운영(Operate), 개선(Optimize), 분석(Analyze)을 거치며, Analyze에서 도출된 인사이트는 Update 루프를 통해 Discover·Design 단계로 환류됩니다.</p>
+        <div class="schematic-diagram fade-in-up">
+          <img src="../assets/diagrams/opts-flow.svg" alt="Opts 트랙 플로우 — Operate, Optimize, Analyze 3단계와 Update 루프" />
         </div>
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────
-         06/08  OPTS TRACK — DETAIL
-    ───────────────────────────────────── -->
-    <section id="opts-detail" class="section section--light track-detail track-detail--opts" aria-label="Opts 트랙 단계별 상세">
+    <!-- ─── 06/08  OPTS DETAIL ─── -->
+    <section id="opts-detail" class="section section--light detail-section" aria-label="Opts 트랙 단계별 상세">
       <div class="container">
         <header class="section-header fade-in-up">
-          <p class="annotation">// 03. Opts Track · Detail</p>
-          <h2 class="section-header__title">단계별 상세</h2>
+          <p class="annotation">// Opts — 단계별 상세</p>
         </header>
-
-        <div class="stage-grid stage-grid--3 fade-in-up">
-
-          <article class="stage-detail-card stage-detail-card--opts" tabindex="0">
-            <div class="stage-detail-card__strip" aria-hidden="true"></div>
-            <div class="stage-detail-card__body">
-              <h3 class="stage-detail-card__name">Operate</h3>
-              <dl class="stage-detail-card__axes">
-                <dt>목적</dt>
-                <dd>배포된 시스템의 안정적 운영 유지</dd>
-                <dt>주요 활동</dt>
-                <dd>모니터링, 인시던트 대응, 사용자 지원, SLA 추적, 백업·복구</dd>
-                <dt>AI 활용</dt>
-                <dd>메트릭·로그 이상 탐지, 인시던트 자동 분류, 1차 응대 보조</dd>
-                <dt>산출물</dt>
-                <dd>운영 로그, 인시던트 리포트, 헬스 메트릭 대시보드, SLA 리포트</dd>
-              </dl>
-            </div>
+        <div class="detail-grid detail-grid--3 fade-in-up">
+          <article class="detail-card detail-card--opts">
+            <div class="detail-card__head"><span class="detail-card__num">05</span><h3 class="detail-card__name">Operate</h3></div>
+            <dl class="detail-card__axes">
+              <dt>목적</dt><dd>배포된 시스템의 안정적 운영 유지</dd>
+              <dt>주요 활동</dt><dd>모니터링, 인시던트 대응, 사용자 지원, SLA 추적, 백업·복구</dd>
+              <dt>AI 활용</dt><dd>메트릭·로그 이상 탐지, 인시던트 자동 분류, 1차 응대 보조</dd>
+              <dt>산출물</dt><dd>운영 로그, 인시던트 리포트, 헬스 메트릭 대시보드, SLA 리포트</dd>
+            </dl>
           </article>
-
-          <article class="stage-detail-card stage-detail-card--opts" tabindex="0">
-            <div class="stage-detail-card__strip" aria-hidden="true"></div>
-            <div class="stage-detail-card__body">
-              <h3 class="stage-detail-card__name">Optimize</h3>
-              <dl class="stage-detail-card__axes">
-                <dt>목적</dt>
-                <dd>운영 인사이트를 반영한 시스템 개선 실행</dd>
-                <dt>주요 활동</dt>
-                <dd>성능 튜닝, 기능 개선, 보안 패치, A/B 테스트, 인프라 최적화</dd>
-                <dt>AI 활용</dt>
-                <dd>성능 병목 진단, A/B 결과 분석, 리팩토링 제안, 우선순위 추천</dd>
-                <dt>산출물</dt>
-                <dd>최적화 결과 리포트, A/B 리포트, 성능 개선 지표, 변경 이력</dd>
-              </dl>
-            </div>
+          <article class="detail-card detail-card--opts">
+            <div class="detail-card__head"><span class="detail-card__num">06</span><h3 class="detail-card__name">Optimize</h3></div>
+            <dl class="detail-card__axes">
+              <dt>목적</dt><dd>운영 인사이트를 반영한 시스템 개선 실행</dd>
+              <dt>주요 활동</dt><dd>성능 튜닝, 기능 개선, 보안 패치, A/B 테스트, 인프라 최적화</dd>
+              <dt>AI 활용</dt><dd>성능 병목 진단, A/B 결과 분석, 리팩토링 제안, 우선순위 추천</dd>
+              <dt>산출물</dt><dd>최적화 결과 리포트, A/B 리포트, 성능 개선 지표, 변경 이력</dd>
+            </dl>
           </article>
-
-          <article class="stage-detail-card stage-detail-card--opts" tabindex="0">
-            <div class="stage-detail-card__strip" aria-hidden="true"></div>
-            <div class="stage-detail-card__body">
-              <h3 class="stage-detail-card__name">Analyze</h3>
-              <dl class="stage-detail-card__axes">
-                <dt>목적</dt>
-                <dd>시스템 동작 패턴 분석과 다음 진화 방향 평가</dd>
-                <dt>주요 활동</dt>
-                <dd>사용 데이터 분석, 행동 패턴, 한계 평가, 개선 방향 도출, 에이전트화 적합성</dd>
-                <dt>AI 활용</dt>
-                <dd>패턴 클러스터링, 이상 행동 탐지, 인사이트 요약, 개선 가설 생성</dd>
-                <dt>산출물</dt>
-                <dd>사용 패턴 분석 리포트, Update 피드백 패키지, 에이전트화 적합성 평가서</dd>
-              </dl>
-            </div>
+          <article class="detail-card detail-card--opts">
+            <div class="detail-card__head"><span class="detail-card__num">07</span><h3 class="detail-card__name">Analyze</h3></div>
+            <dl class="detail-card__axes">
+              <dt>목적</dt><dd>시스템 동작 패턴 분석과 다음 진화 방향 평가</dd>
+              <dt>주요 활동</dt><dd>사용 데이터 분석, 행동 패턴, 한계 평가, 개선 방향 도출, 에이전트화 적합성</dd>
+              <dt>AI 활용</dt><dd>패턴 클러스터링, 이상 행동 탐지, 인사이트 요약, 개선 가설 생성</dd>
+              <dt>산출물</dt><dd>사용 패턴 분석 리포트, Update 피드백 패키지, 에이전트화 적합성 평가서</dd>
+            </dl>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────
-         07/08  AGENT TRACK — FLOW
-    ───────────────────────────────────── -->
-    <section id="agent-flow" class="section section--dark-2 track-flow track-flow--agent" aria-label="Agent 트랙 플로우">
-      <div class="container">
-        <header class="section-header fade-in-up">
-          <p class="annotation annotation--on-dark">// 04. Agent Track</p>
-          <h2 class="section-header__title">Agent 트랙 — 시스템에서 에이전트로.</h2>
-        </header>
-        <p class="track-flow__intro fade-in-up">
-          Agent 트랙은 자율 에이전트의 개발과 운영을 담당합니다. 두 가지 진입 경로 — Opts 트랙의 Analyze에서 기존 시스템을 에이전트화하거나, 처음부터 단독 프로젝트로 에이전트를 개발 — 가 있습니다. 일반적인 에이전트 개발 프로세스 4단계 — 전략·기획(Strategy), 설계(Design), 구축(Build), 점진적 배포(Deploy) — 를 거칩니다.
-        </p>
-
-        <div class="track-container track-container--agent fade-in-up">
-          <div class="agent-layout">
-
-            <!-- 듀얼 진입점 -->
-            <div class="dual-entry" aria-label="Agent 트랙 진입 경로">
-              <article class="dual-entry__item dual-entry__item--from-opts">
-                <p class="dual-entry__label">Analyze (Opts)</p>
-                <p class="dual-entry__sublabel">기존 시스템 환류</p>
-              </article>
-              <div class="dual-entry__merge" aria-hidden="true">
-                <svg viewBox="0 0 80 130" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="130">
-                  <path d="M4 28 C 40 28, 65 65, 70 65" stroke="#86EFAC" stroke-width="1.5" stroke-dasharray="4 3"/>
-                  <path d="M4 102 C 40 102, 65 65, 70 65" stroke="#FDBA74" stroke-width="1.5"/>
-                  <circle cx="74" cy="65" r="5" fill="#EA580C"/>
-                  <path d="M79 65 L 86 65" stroke="#FDBA74" stroke-width="1.5"/>
-                </svg>
-              </div>
-              <article class="dual-entry__item dual-entry__item--standalone">
-                <p class="dual-entry__label">Standalone Project</p>
-                <p class="dual-entry__sublabel">신규 프로젝트</p>
-              </article>
-            </div>
-
-            <!-- Phase Boxes -->
-            <div class="phase-flow phase-flow--4" role="list" aria-label="Agent 트랙 4단계 플로우">
-
-              <article class="phase-box phase-box--agent" role="listitem" tabindex="0">
-                <div class="phase-box__top-strip" aria-hidden="true"></div>
-                <div class="phase-box__header">
-                  <span class="phase-box__num" aria-hidden="true">01</span>
-                  <h3 class="phase-box__name">Strategy</h3>
-                </div>
-                <ul class="phase-box__list">
-                  <li>자율화 영역 정의</li>
-                  <li>사용 시나리오 설계</li>
-                  <li>권한 모델 수립</li>
-                  <li>안전 가드레일 정책</li>
-                  <li>성공 지표 정의</li>
-                </ul>
-              </article>
-
-              <div class="phase-arrow" aria-hidden="true">
-                <svg width="32" height="16" viewBox="0 0 32 16" fill="none"><path d="M0 8h28M22 2l8 6-8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-
-              <article class="phase-box phase-box--agent" role="listitem" tabindex="0">
-                <div class="phase-box__top-strip" aria-hidden="true"></div>
-                <div class="phase-box__header">
-                  <span class="phase-box__num" aria-hidden="true">02</span>
-                  <h3 class="phase-box__name">Design</h3>
-                </div>
-                <ul class="phase-box__list">
-                  <li>도구셋(Tool) 정의</li>
-                  <li>프롬프트·정책 설계</li>
-                  <li>평가 시나리오</li>
-                  <li>거버넌스 설계</li>
-                  <li>인간 개입 지점</li>
-                </ul>
-              </article>
-
-              <div class="phase-arrow" aria-hidden="true">
-                <svg width="32" height="16" viewBox="0 0 32 16" fill="none"><path d="M0 8h28M22 2l8 6-8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-
-              <article class="phase-box phase-box--agent" role="listitem" tabindex="0">
-                <div class="phase-box__top-strip" aria-hidden="true"></div>
-                <div class="phase-box__header">
-                  <span class="phase-box__num" aria-hidden="true">03</span>
-                  <h3 class="phase-box__name">Build</h3>
-                </div>
-                <ul class="phase-box__list">
-                  <li>에이전트 구현</li>
-                  <li>평가 하네스 구축</li>
-                  <li>시뮬레이션 운영</li>
-                  <li>트레이스 분석</li>
-                  <li>안전성 검증</li>
-                </ul>
-              </article>
-
-              <div class="phase-arrow" aria-hidden="true">
-                <svg width="32" height="16" viewBox="0 0 32 16" fill="none"><path d="M0 8h28M22 2l8 6-8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-
-              <article class="phase-box phase-box--agent phase-box--deploy" role="listitem" tabindex="0">
-                <div class="phase-box__top-strip" aria-hidden="true"></div>
-                <div class="phase-box__header">
-                  <span class="phase-box__num" aria-hidden="true">04</span>
-                  <h3 class="phase-box__name">Deploy</h3>
-                </div>
-                <ul class="phase-box__list">
-                  <li>Shadow (백그라운드 판단)</li>
-                  <li>Suggest (승인 후 실행)</li>
-                  <li>Act (자율 실행)</li>
-                  <li>감사·모니터링</li>
-                  <li>권한 확장</li>
-                </ul>
-                <div class="phase-box__autonomy" aria-label="점진적 자율 단계: Shadow, Suggest, Act">
-                  <span class="autonomy-step">Shadow</span>
-                  <span class="autonomy-arrow" aria-hidden="true">→</span>
-                  <span class="autonomy-step">Suggest</span>
-                  <span class="autonomy-arrow" aria-hidden="true">→</span>
-                  <span class="autonomy-step autonomy-step--act">Act</span>
-                </div>
-              </article>
-
-            </div>
-          </div>
+    <!-- ─── 07/08  AGENT FLOW (split) ─── -->
+    <section id="agent-flow" class="section section--dark split-section" aria-label="Agent 트랙 플로우">
+      <div class="visual-panel visual-panel--agent">
+        <div class="panel-num-badge panel-num-badge--light">
+          <span>07</span><span class="slash">/</span><span>08</span>
+        </div>
+        <div class="agent-lines" aria-hidden="true"></div>
+        <div class="track-label">
+          <span class="track-slash">/</span><span class="track-name">AGENT</span>
+        </div>
+        <span class="ai-credit annotation annotation--on-dark">// agent track</span>
+      </div>
+      <div class="content-panel">
+        <p class="annotation">// 04. Agent Track</p>
+        <h2 class="content-panel__title">Agent 트랙 — 시스템에서 에이전트로.</h2>
+        <p class="content-panel__body">Agent 트랙은 자율 에이전트의 개발과 운영을 담당합니다. Opts 트랙의 Analyze에서 기존 시스템을 에이전트화하거나, 처음부터 단독 프로젝트로 에이전트를 개발합니다. Strategy, Design, Build, Deploy 4단계를 거칩니다.</p>
+        <div class="schematic-diagram fade-in-up">
+          <img src="../assets/diagrams/agent-flow.svg" alt="Agent 트랙 플로우 — 듀얼 진입과 4단계" />
         </div>
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────
-         08/08  AGENT TRACK — DETAIL
-    ───────────────────────────────────── -->
-    <section id="agent-detail" class="section section--light track-detail track-detail--agent" aria-label="Agent 트랙 단계별 상세">
+    <!-- ─── 08/08  AGENT DETAIL ─── -->
+    <section id="agent-detail" class="section section--light detail-section" aria-label="Agent 트랙 단계별 상세">
       <div class="container">
         <header class="section-header fade-in-up">
-          <p class="annotation">// 04. Agent Track · Detail</p>
-          <h2 class="section-header__title">단계별 상세</h2>
+          <p class="annotation">// Agent — 단계별 상세</p>
         </header>
-
-        <div class="stage-grid fade-in-up">
-
-          <article class="stage-detail-card stage-detail-card--agent" tabindex="0">
-            <div class="stage-detail-card__strip" aria-hidden="true"></div>
-            <div class="stage-detail-card__body">
-              <h3 class="stage-detail-card__name">Strategy</h3>
-              <dl class="stage-detail-card__axes">
-                <dt>목적</dt>
-                <dd>에이전트화 범위와 거버넌스 정의</dd>
-                <dt>주요 활동</dt>
-                <dd>자율화 영역 정의, 사용 시나리오, 권한 모델, 안전 가드레일 정책, KPI</dd>
-                <dt>AI 활용</dt>
-                <dd>유사 사례 리서치, 위험·이익 분석 보조, 시나리오 생성</dd>
-                <dt>산출물</dt>
-                <dd>에이전트 전략 문서, 범위·권한 모델, 거버넌스 정책</dd>
-              </dl>
-            </div>
+        <div class="detail-grid detail-grid--4 fade-in-up">
+          <article class="detail-card detail-card--agent">
+            <div class="detail-card__head"><span class="detail-card__num">01</span><h3 class="detail-card__name">Strategy</h3></div>
+            <dl class="detail-card__axes">
+              <dt>목적</dt><dd>에이전트화 범위와 거버넌스 정의</dd>
+              <dt>주요 활동</dt><dd>자율화 영역 정의, 사용 시나리오, 권한 모델, 안전 가드레일 정책, KPI</dd>
+              <dt>AI 활용</dt><dd>유사 사례 리서치, 위험·이익 분석 보조, 시나리오 생성</dd>
+              <dt>산출물</dt><dd>에이전트 전략 문서, 범위·권한 모델, 거버넌스 정책</dd>
+            </dl>
           </article>
-
-          <article class="stage-detail-card stage-detail-card--agent" tabindex="0">
-            <div class="stage-detail-card__strip" aria-hidden="true"></div>
-            <div class="stage-detail-card__body">
-              <h3 class="stage-detail-card__name">Design</h3>
-              <dl class="stage-detail-card__axes">
-                <dt>목적</dt>
-                <dd>에이전트의 도구·정책·평가 체계 설계</dd>
-                <dt>주요 활동</dt>
-                <dd>도구셋 정의, 프롬프트·정책 설계, 평가 시나리오 작성, 인간 개입 지점 설계</dd>
-                <dt>AI 활용</dt>
-                <dd>프롬프트 초안 생성, 도구 호출 패턴 추천, 평가 케이스 생성</dd>
-                <dt>산출물</dt>
-                <dd>도구 호출 인터페이스 명세, 정책·프롬프트 설계서, 평가 시나리오 세트</dd>
-              </dl>
-            </div>
+          <article class="detail-card detail-card--agent">
+            <div class="detail-card__head"><span class="detail-card__num">02</span><h3 class="detail-card__name">Design</h3></div>
+            <dl class="detail-card__axes">
+              <dt>목적</dt><dd>에이전트의 도구·정책·평가 체계 설계</dd>
+              <dt>주요 활동</dt><dd>도구셋 정의, 프롬프트·정책 설계, 평가 시나리오 작성, 인간 개입 지점 설계</dd>
+              <dt>AI 활용</dt><dd>프롬프트 초안 생성, 도구 호출 패턴 추천, 평가 케이스 생성</dd>
+              <dt>산출물</dt><dd>도구 호출 인터페이스 명세, 정책·프롬프트 설계서, 평가 시나리오 세트</dd>
+            </dl>
           </article>
-
-          <article class="stage-detail-card stage-detail-card--agent" tabindex="0">
-            <div class="stage-detail-card__strip" aria-hidden="true"></div>
-            <div class="stage-detail-card__body">
-              <h3 class="stage-detail-card__name">Build</h3>
-              <dl class="stage-detail-card__axes">
-                <dt>목적</dt>
-                <dd>에이전트 구현 및 안전성 검증</dd>
-                <dt>주요 활동</dt>
-                <dd>에이전트 구현, 평가 하네스 구축, 시뮬레이션, 트레이스 분석, 안전성·정렬성 검증</dd>
-                <dt>AI 활용</dt>
-                <dd>코드 생성, 시뮬레이션 실행, 트레이스 자동 분석, 안전 점검</dd>
-                <dt>산출물</dt>
-                <dd>에이전트 구현체, 평가 하네스, 시뮬레이션 리포트, 안전성 평가서</dd>
-              </dl>
-            </div>
+          <article class="detail-card detail-card--agent">
+            <div class="detail-card__head"><span class="detail-card__num">03</span><h3 class="detail-card__name">Build</h3></div>
+            <dl class="detail-card__axes">
+              <dt>목적</dt><dd>에이전트 구현 및 안전성 검증</dd>
+              <dt>주요 활동</dt><dd>에이전트 구현, 평가 하네스 구축, 시뮬레이션, 트레이스 분석, 안전성·정렬성 검증</dd>
+              <dt>AI 활용</dt><dd>코드 생성, 시뮬레이션 실행, 트레이스 자동 분석, 안전 점검</dd>
+              <dt>산출물</dt><dd>에이전트 구현체, 평가 하네스, 시뮬레이션 리포트, 안전성 평가서</dd>
+            </dl>
           </article>
-
-          <article class="stage-detail-card stage-detail-card--agent" tabindex="0">
-            <div class="stage-detail-card__strip" aria-hidden="true"></div>
-            <div class="stage-detail-card__body">
-              <h3 class="stage-detail-card__name">Deploy</h3>
-              <dl class="stage-detail-card__axes">
-                <dt>목적</dt>
-                <dd>점진적 권한 위임으로 자율 운영 단계 도달</dd>
-                <dt>주요 활동</dt>
-                <dd>Shadow → Suggest → Act 단계적 권한 위임, 감사·모니터링, 권한 확장</dd>
-                <dt>AI 활용</dt>
-                <dd>행동 트레이스 실시간 분석, 이상 패턴 탐지, 권한 확장 판단 보조</dd>
-                <dt>산출물</dt>
-                <dd>단계별 배포 리포트, 운영 거버넌스 매뉴얼, 권한 위임 이력</dd>
-              </dl>
-            </div>
+          <article class="detail-card detail-card--agent">
+            <div class="detail-card__head"><span class="detail-card__num">04</span><h3 class="detail-card__name">Deploy</h3></div>
+            <dl class="detail-card__axes">
+              <dt>목적</dt><dd>점진적 권한 위임으로 자율 운영 단계 도달</dd>
+              <dt>주요 활동</dt><dd>Shadow → Suggest → Act 단계적 권한 위임, 감사·모니터링, 권한 확장</dd>
+              <dt>AI 활용</dt><dd>행동 트레이스 실시간 분석, 이상 패턴 탐지, 권한 확장 판단 보조</dd>
+              <dt>산출물</dt><dd>단계별 배포 리포트, 운영 거버넌스 매뉴얼, 권한 위임 이력</dd>
+            </dl>
           </article>
-
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ═══════════════════════════════════════════
+  <!-- ════════════════════════════════════════
        FOOTER
-  ═══════════════════════════════════════════ -->
-  <footer id="footer" class="site-footer section--dark" role="contentinfo">
-    <div class="container site-footer__inner">
-      <div class="site-footer__cta fade-in-up">
-        <h2 class="site-footer__heading">도움이 필요하신가요?</h2>
-        <p class="site-footer__subheading">전문가와 이야기해 보세요.</p>
-        <a class="cta-button" href="/contact/" aria-label="그로브에 문의하기">
-          Contact us
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
-      <div class="site-footer__divider" aria-hidden="true"></div>
-      <p class="site-footer__copy">GROVE&nbsp;&nbsp;·&nbsp;&nbsp;grovesoft.net&nbsp;&nbsp;·&nbsp;&nbsp;© 2026</p>
+  ════════════════════════════════════════ -->
+  <footer id="footer" class="section section--dark site-footer" role="contentinfo">
+    <div class="container">
+      <p class="annotation annotation--on-dark">// Contact</p>
+      <h2 class="footer-heading">도움이 필요하신가요?</h2>
+      <p class="footer-sub">전문가와 이야기해 보세요.</p>
+      <a href="/contact/" class="cta-button">Contact us →</a>
+      <hr class="footer-divider" aria-hidden="true" />
+      <p class="footer-copy">GROVE  ·  grovesoft.net  ·  © 2026</p>
     </div>
   </footer>
 
